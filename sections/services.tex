@@ -1,6 +1,6 @@
 % Section 2 - Services
 % Roberto Masocco <roberto.masocco@uniroma2.it>
-% May 14, 2024
+% May 12, 2025
 
 % ### Services ###
 \section{Services}
@@ -17,17 +17,16 @@
   \end{figure}
 \end{frame}
 \begin{frame}{ROS 2 services}{Communication overview}
-  In actual ROS 2 applications:
   \begin{enumerate}
     \item The \textbg{client} sends a \textbg{request message} to the server.
     \item The \textbg{server} receives the request and processes it.
     \item Meanwhile, the \textbg{client} can either \textbg{block} waiting for the response or \textbg{synchronously poll} it.
     \item When done, the \textbg{server} sends a \textbg{response message} to the client.
-    \item If waiting, the \textbg{client} awakes when receiving the response.
+    \item If waiting, the \textbg{client} awakes when it receives the response.
   \end{enumerate}
 \end{frame}
 \begin{frame}{ROS 2 services}{CLI introspection tools}
-  The main command is \texttt{ros2 service} with the following verbs:
+  The main command is \texttt{ros2 service} with the following verbs.
   \begin{itemize}
     \item \texttt{list} Lists all active services.
     \item \texttt{type} Prints the service type.
@@ -37,7 +36,7 @@
 \end{frame}
 \begin{frame}{ROS 2 services}{Coding hints for servers and clients}
   \begin{block}{Servers}
-    Similarly to topic subscriptions, requests are processed in appropriate \textbf{callbacks}, taking \textbf{two arguments}, in which responses are also populated. The server object is as well only needed to instantiate the service.
+    Similarly to topic subscriptions, requests are processed in appropriate \textbf{callbacks}, taking \textbf{two arguments}, in which responses are also populated. The \texttt{Service} object is as well only needed to instantiate the service.
   \end{block}
   \begin{block}{Clients}
     As per the previous dynamics, one has to \textbf{code each step} of the client side into their application using appropriate \textbf{ROS 2 APIs}. \textbf{The client object is used to send requests}, while \textbf{responses are handled as \texttt{future} objects\footnote{\href{https://en.cppreference.com/w/cpp/thread/future}{\color{blue}\underline{\texttt{std::future} - C++ Reference}}}}.

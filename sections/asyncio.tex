@@ -1,6 +1,6 @@
 % Section 1 - Asynchronous I/O
 % Roberto Masocco <roberto.masocco@uniroma2.it>
-% May 14, 2024
+% May 12, 2025
 
 % ### Asynchronous I/O ###
 \section{Asynchronous I/O}
@@ -13,7 +13,7 @@
     \item execute \textbg{computations} (\emph{e.g.}, \texttt{1 + 1 = 2}), using regular \textbg{CPU} instructions;
     \item access \textbg{system resources} (both \textbg{hardware} and \textbg{software}) through calls to the \textbg{kernel} (\emph{i.e.}, \textbg{system calls}), \textbg{exchanging data} in both directions.
   \end{itemize}
-  When these resources are not part of the OS, but rather the OS enables tasks to interface\footnote{Drivers, protocols, software stacks...} with them, we talk about \textbg{I/O} (\emph{Input/Output}).\\
+  When these resources are not part of the OS, but rather the OS offers an interface\footnote{Drivers, protocols, software stacks...} to them, we talk about \textbg{I/O} (\emph{Input/Output}).\\
   \bigskip
   OS schedulers typically distinguish between \textbg{CPU-bound} and \textbg{I/O-bound} tasks, because of their different \textbg{execution patterns}.
 \end{frame}

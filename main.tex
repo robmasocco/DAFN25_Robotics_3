@@ -1,22 +1,22 @@
-% DAFN24 - Robotics - Lecture 3
+% DAFN25 - Robotics - Lecture 3
 % Roberto Masocco <roberto.masocco@uniroma2.it>
-% May 14, 2024
+% May 12, 2025
 
 \documentclass[aspectratio=169]{beamer}
 
 % Slides layout
 \usepackage[
-    title={ROS 2},
-    subtitle={Advanced communication I},
-    event={DAFN},
-    author={Roberto Masocco},
-    longauthor={Roberto Masocco},
-    email={roberto.masocco@uniroma2.it},
-    institute={Tor Vergata},
-    longinstitute={University of Rome Tor Vergata},
-    department={Department of Civil Engineering and Computer Science Engineering},
-    researchgroup={},
-    date={May 14, 2024}
+  title={ROS 2},
+  subtitle={Advanced communication I},
+  event={DAFN},
+  author={Roberto Masocco},
+  longauthor={Roberto Masocco},
+  email={roberto.masocco@uniroma2.it},
+  institute={Tor Vergata},
+  longinstitute={Tor Vergata University of Rome},
+  department={Department of Civil Engineering and Computer Science Engineering},
+  researchgroup={},
+  date={May 12, 2025}
 ]{utvengbeamer}
 
 % Code listings settings
@@ -26,21 +26,21 @@
 \definecolor{codeocher}{rgb}{0.8 0.47 0.13}
 \usepackage{listings}
 \lstdefinestyle{beamer}{
-    basicstyle=\ttfamily\small,
-    commentstyle=\color{codegreen},
-    breakatwhitespace=false,
-    captionpos=b,
-    frame=lines,
-    keepspaces=true,
-    keywordstyle=\color{codered}\bfseries,
-    numbers=left,
-    numbersep=5pt,
-    numberstyle=\footnotesize,
-    showspaces=false,
-    showstringspaces=false,
-    showtabs=false,
-    stringstyle=\color{codeocher},
-    tabsize=2
+  basicstyle=\ttfamily\small,
+  commentstyle=\color{codegreen},
+  breakatwhitespace=false,
+  captionpos=b,
+  frame=lines,
+  keepspaces=true,
+  keywordstyle=\color{codered}\bfseries,
+  numbers=left,
+  numbersep=5pt,
+  numberstyle=\footnotesize,
+  showspaces=false,
+  showstringspaces=false,
+  showtabs=false,
+  stringstyle=\color{codeocher},
+  tabsize=2
 }
 \lstset{style=beamer}
 \lstdefinelanguage{ros2msg}{
@@ -75,10 +75,11 @@
 % --- Exercises ---
 \begin{frame}{Exercises}
 	\begin{itemize}
-    \item Add a timer to the subscriber in the \texttt{topic\_pubsub\_cpp} package to periodically toggle the ROS 2 subscriber on and off; how would you do that?\\
-    (Solution: \href{https://github.com/IntelligentSystemsLabUTV/ros2-examples/blob/humble/src/cpp/topic_pubsub_cpp/src/resetting_sub.cpp}{\color{blue}\underline{\texttt{resetting\_sub}}} example.)
-		\item Run the service client and server examples, and try to call the service from the command line.
-		\item Create two new packages for server and client nodes, and for a custom service definition named \texttt{CapString.srv}; the server should take a string as input and return two strings: the same string fully capitalized, and the number of characters in the string.
+    \item Run the service client and server examples, and try to call the service from the command line.
+		\item Add a timer to the subscriber in the \texttt{topic\_pubsub\_cpp} package to periodically toggle the ROS 2 subscriber on and off; how would you do that?\\
+		      (Solution: \href{https://github.com/IntelligentSystemsLabUTV/ros2-examples/blob/humble/src/cpp/topic_pubsub_cpp/src/resetting_sub.cpp}{\color{blue}\underline{\texttt{resetting\_sub}}} example.)
+		\item Create two new packages: one for server and client nodes, and one for a custom service definition named \texttt{CapString.srv}; the server should take a string as input and return two strings: the same string fully capitalized, and the number of characters in the string.\\
+		      (Before trying this: read \href{https://github.com/IntelligentSystemsLabUTV/ros2-examples/blob/jazzy/interfaces.md}{\color{blue}\underline{\texttt{interfaces.md}}}.)
 	\end{itemize}
 \end{frame}
 
